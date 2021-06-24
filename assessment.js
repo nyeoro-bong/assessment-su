@@ -1,13 +1,18 @@
 "use strict";
+const body = document.getElementsByTagName("body")[0];
 const userNameInput = document.getElementById("user-name");
 const assessmentButton = document.getElementById("assessment");
 const fukidashiContent =
   document.getElementsByClassName("fukidashi-content")[0];
-  const catBody =
-    document.getElementsByClassName("cat-body")[0];
+const catBody = document.getElementsByClassName("cat-body")[0];
 const resultDivided = document.getElementById("result-area");
 const tweetDivided = document.getElementById("tweet-area");
 
+// body の高さをブラウザのwindowの高さにフィットさせる
+body.style.height = `${window.innerHeight}px`;
+window.addEventListener("resize", () => {
+  body.style.height = `${window.innerHeight}px`;
+});
 /**
  * 指定した要素の子どもを全て除去する
  * @param {HTMLElement} element HTMLの要素
@@ -44,7 +49,7 @@ assessmentButton.onclick = () => {
   // 文字の透明化
   fukidashiContent.classList.add("transparent");
   // 猫をカラフルに
-  catBody.classList.add("colorful-body")
+  catBody.classList.add("colorful-body");
   // 透明化が終了したら文字を挿入
   setTimeout(() => {
     // 太字にする処理
@@ -54,7 +59,7 @@ assessmentButton.onclick = () => {
     );
 
     // 猫を元の色に戻す
-    catBody.classList.remove("colorful-body")
+    catBody.classList.remove("colorful-body");
 
     // 吹き出しに要素を挿入
     // 結果にタグを含めているため、innerHTML に変更。このメソッドは危険性をもっていますが、それは2章以降で学んでいきます。
