@@ -1,0 +1,8 @@
+.title {
+  color: var(--title-blue);
+  font-size: 48px;
+  text-align: center;
+  transform: rotate(10deg);
+  opacity: 0;
+  animation: fadeIn 1s 0.3s ease forwards;
+}

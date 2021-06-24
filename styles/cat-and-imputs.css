@@ -1,0 +1,80 @@
+.cat-and-inputs {
+  display: flex;
+  opacity: 0;
+  animation: fadeIn 1s 0.5s ease forwards;
+}
+
+.cat {
+  --cat-width: 160px;
+  width: var(--cat-width);
+  height: calc(var(--cat-width) * 1.25);
+  object-fit: contain;
+}
+
+.cat-body {
+  fill: #ffc6e4;
+  transition: fill 0.3s ease;
+}
+.colorful-body {
+  animation: colorfulcat 3s linear infinite;
+}
+@keyframes colorfulcat {
+  0% {
+    fill: #ffc6e4;
+  }
+  20% {
+    fill: #dbc6ff;
+  }
+  40% {
+    fill: #c6fff8;
+  }
+  60% {
+    fill: #d5ffc6;
+  }
+  75% {
+    fill: #ffdac6;
+  }
+  90% {
+    fill: #ffc6c9;
+  }
+  100% {
+    fill: #ffc6e4;
+  }
+}
+
+.input-elements {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.text-input {
+  display: block;
+  width: 7em;
+  font-size: 20px;
+  padding: 3px 6px;
+  border: 3px solid var(--font-blue);
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.text-input:focus {
+  border: 3px solid var(--title-blue);
+  outline: 0;
+}
+
+.exe-btn {
+  display: block;
+  padding: 5px 20px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: var(--vivid-pink);
+  border-style: none;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}

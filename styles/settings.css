@@ -1,0 +1,48 @@
+/* css変数の設定 */
+:root {
+  --bg-pink: #ffeaf5;
+  --font-blue: #01395b;
+  --title-blue: #2dabf6;
+  --white: white;
+  --vivid-pink: #ff64b5;
+}
+
+/* フォント */
+.stick {
+  font-family: "Stick", sans-serif;
+}
+.kiwi {
+  font-family: "Kiwi Maru", serif;
+}
+.noto-jp {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* body */
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-pink);
+  color: var(--font-blue);
+  border: 10px solid var(--white);
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* general keyframe */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
