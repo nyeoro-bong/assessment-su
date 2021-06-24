@@ -15,7 +15,7 @@ function removeAllChildren(element) {
   }
 }
 
-const onClickFunc = () => {
+assessmentButton.onclick = () => {
   const userName = userNameInput.value;
   if (userName.length === 0) {
     // 名前が空の時は処理を終了する
@@ -51,13 +51,6 @@ const onClickFunc = () => {
   script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
   tweetDivided.appendChild(script);
 };
-
-assessmentButton.onclick = onClickFunc
-// userNameInput.onkeydown = event => {
-//   if (event.key === 'Enter') {
-//     onClickFunc()
-//   }
-// };
 
 const answers = [
   '{userName}のいいところは声です。{userName}の特徴的な声はみなを惹きつけ、心に残ります。',
