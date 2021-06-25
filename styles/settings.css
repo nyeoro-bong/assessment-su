@@ -37,6 +37,10 @@ body {
   align-items: center;
 }
 
+.all-contents-wrap {
+  max-width: 95%;
+}
+
 /* general keyframe */
 @keyframes fadeIn {
   from {
